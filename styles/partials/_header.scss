@@ -1,0 +1,122 @@
+//------------------------------------
+//------header styles-----------------
+//------------------------------------
+
+header .innerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+//------------------------
+//------nav menu----------
+//------------------------
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    color: $background;
+    position: fixed;
+    margin: 0 0 0 10%;
+}
+
+//icon to expand nav
+.navExpand {
+    width: 55px;
+    height: 55px;
+    background-color: $accent;
+    color: $background;
+    border-radius: 50%;
+    margin: 20px 50px 0 10px;
+    
+    //center icon
+    text-align: center;
+    font-size: 1.75rem;
+    //styles for dot around icon
+    line-height: 55px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background-color: $accent;
+    transition: 0.4s;
+}
+
+nav a {
+    color: $background;
+}
+
+//------------------------------
+//-------central section--------
+//------------------------------
+.headerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.portrait {
+    width: 25%;
+    margin: 0 0 50px 0;
+}
+
+.portrait img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    text-transform: capitalize;
+}
+
+.headerSocialIcons {
+    margin: 25px 0 0 0;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.headerSocialIcons a {
+    color: $links;
+}
+
+.headerResume {
+    background-color: $accent;
+    color: $background;
+    padding: 5px 35px;
+    margin: 45px 0 0 0;
+    border-radius: 50px;
+}
+
+.headerResume i {
+    margin-right: 10px;
+}
+
+//-----------------------
+//--side ball elements---
+//-----------------------
+.ball {
+    width: 60px;
+    height: 60px;
+    background-color: $accent;
+    border-radius: 50%;
+    position: absolute;
+    top: 56%;
+}
+
+.ballLeft {
+    left: -30px;
+}
+
+.ballRight {
+    right: -30px;
+}
