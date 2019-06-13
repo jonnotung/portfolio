@@ -18,7 +18,7 @@ header nav {
     justify-content: flex-start;
     color: $background;
     position: fixed;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 5%;
 }
 
 //icon to expand nav
@@ -28,7 +28,7 @@ header nav {
     background-color: $accent;
     color: $background;
     border-radius: 50%;
-    margin: 20px 50px 0 10px;
+    margin: 20px 50px 0 0;
     
     //center icon
     text-align: center;
@@ -109,7 +109,7 @@ header p {
     height: 60px;
     background-color: $accent;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     top: 56%;
 }
 
