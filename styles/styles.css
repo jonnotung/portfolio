@@ -362,4 +362,17 @@ header p {
 .ballRight {
   right: -30px;
 }
+
+.skillGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.skillIcons img {
+  width: 25px;
+}
 /*# sourceMappingURL=styles.css.map */

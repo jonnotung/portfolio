@@ -1,0 +1,10 @@
+.skillGrid {
+    display: grid;
+    //2 rows of 6 columns
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.skillIcons img {
+    width: 25px;
+}
