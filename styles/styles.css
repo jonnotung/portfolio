@@ -179,8 +179,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
-h1, h2 {
+h1, h2, h3, p, li, ul {
   margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -225,8 +226,28 @@ body {
   font-size: 125%;
 }
 
+p {
+  font-size: 1rem;
+}
+
 .hiddenNav {
   opacity: 0;
+}
+
+header button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 55px;
+  height: 55px;
+}
+
+a:focus {
+  outline: 2px solid #4b89ed;
+}
+
+header {
+  min-height: 100vh;
 }
 
 header .innerWrapper {
@@ -252,6 +273,7 @@ header nav {
           justify-content: flex-start;
   color: #f3f6ff;
   position: fixed;
+  top: 4vh;
   margin: 0 0 0 5%;
 }
 
@@ -261,19 +283,23 @@ header nav {
   background-color: #ff3511;
   color: #f3f6ff;
   border-radius: 50%;
-  margin: 20px 50px 0 0;
+  border: none;
+  margin: 0 50px 0 0;
   text-align: center;
   font-size: 1.75rem;
   line-height: 55px;
+}
+
+.navExpand:focus {
+  outline: 2px solid #4b89ed;
 }
 
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -300,12 +326,12 @@ nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 200px;
+  margin-top: 125px;
 }
 
 .portrait {
   width: 25%;
-  margin: 0 0 50px 0;
+  margin: 0 0 7.5vh 0;
 }
 
 .portrait img {
@@ -314,12 +340,12 @@ nav a {
 }
 
 header p {
-  margin: 10px 0 0 0;
+  margin: 2.5vh 0 0 0;
   text-transform: capitalize;
 }
 
 .headerSocialIcons {
-  margin: 25px 0 0 0;
+  margin: 5vh 0 0 0;
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -331,14 +357,14 @@ header p {
 }
 
 .headerSocialIcons a {
-  color: #a3a3a3;
+  color: #838383;
 }
 
 .headerResume {
   background-color: #ff3511;
   color: #f3f6ff;
   padding: 5px 35px;
-  margin: 45px 0 0 0;
+  margin: 7vh 0 0 0;
   border-radius: 50px;
 }
 
@@ -363,16 +389,136 @@ header p {
   right: -30px;
 }
 
+section.profile {
+  min-height: 100vh;
+  margin-top: 2.5vh;
+}
+
+.profileMain,
+.profileAside {
+  padding-top: 25px;
+}
+
+.profile h3 {
+  margin-bottom: 35px;
+  text-transform: capitalize;
+}
+
+.profile .innerWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profileMain {
+  width: 62%;
+}
+
+.profileStory p {
+  color: #838383;
+  margin-bottom: 50px;
+}
+
 .skillGrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1.5fr)[3];
+      grid-template-rows: repeat(3, 1.5fr);
+  text-align: center;
 }
 
-.skillIcons img {
-  width: 25px;
+.skillIcons {
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.profileAside {
+  width: 33%;
+  background-color: #ff3511;
+  color: #f3f6ff;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.personalInfo,
+.skills {
+  margin-bottom: 30px;
+}
+
+.profileWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profileKey,
+.profileValue {
+  display: block;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-bottom: 10px;
+}
+
+.profileValue {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.skills li,
+.background li {
+  margin-bottom: 10px;
+}
+
+.portfolio {
+  margin-top: 17.5vh;
+  padding-bottom: 20vh;
+}
+
+.portfolioNav {
+  width: 45%;
+  margin: 30px auto 60px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.portfolioGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10%;
+  text-align: center;
+}
+
+.portfolio button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: #f3f6ff;
+  padding: 12px 30px;
+}
+
+.portfolio button.selected {
+  border-radius: 50px;
+  background-color: #ff3511;
+  color: #f3f6ff;
 }
 /*# sourceMappingURL=styles.css.map */

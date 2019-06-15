@@ -1,6 +1,9 @@
 //------------------------------------
 //------header styles-----------------
 //------------------------------------
+header {
+    min-height: 100vh;
+}
 
 header .innerWrapper {
     display: flex;
@@ -18,6 +21,7 @@ header nav {
     justify-content: flex-start;
     color: $background;
     position: fixed;
+    top: 4vh;
     margin: 0 0 0 5%;
 }
 
@@ -28,7 +32,8 @@ header nav {
     background-color: $accent;
     color: $background;
     border-radius: 50%;
-    margin: 20px 50px 0 0;
+    border: none;
+    margin: 0 50px 0 0;
     
     //center icon
     text-align: center;
@@ -37,9 +42,13 @@ header nav {
     line-height: 55px;
 }
 
+.navExpand:focus {
+    outline: 2px solid $focus;
+}
+
 nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 50%;
     padding: 12px 30px;
@@ -59,12 +68,12 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 125px;
 }
 
 .portrait {
     width: 25%;
-    margin: 0 0 50px 0;
+    margin: 0 0 7.5vh 0;
 }
 
 .portrait img {
@@ -73,12 +82,12 @@ nav a {
 }
 
 header p {
-    margin: 10px 0 0 0;
+    margin: 2.5vh 0 0 0;
     text-transform: capitalize;
 }
 
 .headerSocialIcons {
-    margin: 25px 0 0 0;
+    margin: 5vh 0 0 0;
     width: 25%;
     display: flex;
     justify-content: space-between;
@@ -93,7 +102,7 @@ header p {
     background-color: $accent;
     color: $background;
     padding: 5px 35px;
-    margin: 45px 0 0 0;
+    margin: 7vh 0 0 0;
     border-radius: 50px;
 }
 

@@ -20,12 +20,14 @@
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <nav>
-                    <div class="navExpandWrap">
+                    <div class="navExpandWrap" aria-labelledby="polite">
                         <label class="visuallyHidden">Toggle navbar</label>
-                        <i class="fas fa-bars navExpand"></i>
+                        <button class="navExpand" tabindex=0>
+                            <i class="fas fa-bars"></i>
+                        </button>
                     </div>
                     <ul class="hiddenNav">
-                        <li>Main</li>
+                        <li><a href="">Main</a></li>
                         <li><a href="">Portfolio</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
@@ -37,13 +39,13 @@
                     <h1>Jonathan Tung</h1>
                     <p>Front-end developer</p>
                     <div class="headerSocialIcons">
-                        <a href="">
-                            <label class="visuallyHidden">Linked In</label><i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/jonathan-tung-9042b2100/">
+                            <label class="visuallyHidden">LinkedIn</label><i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="">
+                        <a href="https://twitter.com/jonathan_k_tung">
                             <label class="visuallyHidden">Twitter</label><i class="fab fa-twitter"></i>
                         </a>
-                        <a href="">
+                        <a href="https://github.com/jonnotung">
                             <label class="visuallyHidden">Github</label><i class="fab fa-github"></i>
                         </a>
                     </div>
@@ -52,8 +54,8 @@
                     </a>
                 </div>
                 <!-- headerInfo -->
-                <div class="ball ballLeft"></div>
-                <div class="ball ballRight"></div>
+                <!-- <div class="ball ballLeft"></div>
+                <div class="ball ballRight"></div> -->
             </div>
             <!-- innerWrapper -->
         </div>
@@ -66,14 +68,14 @@
                 <article class="profileMain">
                     <div class="profileStory">
                         <h3>About me</h3>
-                        <p>Regent park victoria park broken social scene skydome davisville cne seneca. Kawhi leonard summerhill woodbine bathurst
-                        kensington market danforth? Wonderland metric woodbridge john candy demar derozan. Donlands leslieville wonderland
-                        weston dupont darryl sittler. Greektown st patrick high park. U of t st lawrence market marlies north york keele castle
-                        frank. Glencairn king west queens quay. Richmond hill rosie maclennan katheryn winnick davenport king east lights the
-                        beaches! Casa loma dovercourt mstrkrft death from above. King richview east york sarah polley?</p>
+                        <p>I’m a front-end developer based in Toronto. I have a passion for creating web applications that are great to look at,
+                        interactive, and above all functional. I’m currently experimenting with incorporating sprites and sprite animations in
+                        my projects. When I’m not in front of a computer I could be found organizing events and herding cats … I mean people for
+                        the tabletop gaming community in Toronto.</p>
                     </div>
+                    <!-- profileStory -->
                     <div class="profileSkills">
-                        <h3>Skills</h3>
+                        <h3>Technical skills</h3>
                         <div class="skillGrid">
                             <div class="skillIcons">
                                 <p>HTML</p>
@@ -124,25 +126,112 @@
                                 <p>Confluence</p>
                                 <i class="devicon-confluence-plain"></i>
                             </div>
-                            
                         </div>
+                        <!-- skillsGrid -->
                     </div>
-                    
+                    <!-- profileSkills -->
                 </article>
                 <aside class="profileAside">
                     <div class="personalInfo">
-
+                        <h3>Personal info</h3>
+                        <div class="profileWrapper">
+                            <p class="profileKey">Full name:</p>
+                            <p class="profileValue">Jonathan Tung</p>
+                            <p class="profileKey">Age:</p>
+                            <p class="profileValue">34</p>
+                            <p class="profileKey">Languages:</p>
+                            <p class="profileValue">English</p>
+                        </div>
                     </div>
-
-                    <div class="languages">
-
+                    <!-- personalInfo -->
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>
+                                <p>Pair programming</p>
+                            </li>
+                            <li>
+                                <p>Team-based development</p>
+                            </li>
+                            <li>
+                                <p>Responsive design</p>
+                            </li>
+                            <li>
+                                <p>Project scope management</p>
+                            </li>
+                            <li>
+                                <p>VSCode, Emmet</p>
+                            </li>
+                            <li>
+                                <p>Accessible design</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="hobbies">
-
+                    <!-- skills -->
+                    <div class="background">
+                        <h3>Background</h3>
+                        <ul>
+                            <li>
+                                <p>Front-end development</p>
+                            </li>
+                            <li>
+                                <p>Computer science</p>
+                            </li>
+                            <li>
+                                <p>Biology</p>
+                            </li>
+                        </ul>
                     </div>
+                    <!-- hobbies -->
                 </aside>
             </div>
+            <!-- innerWrapper -->
         </div>
+        <!-- outerWrapper -->
+    </section>
+
+    <section class="portfolio">
+        <div class="outerWrapper">
+            <div class="innerWrapper">
+                <ul class="portfolioNav">
+                    <li>
+                        <button class="portfolioNavProj selected">Projects</button>
+                    </li>
+                    <li>
+                        <button class="portfolioNavPub">Publications</button>
+                    </li>
+                </ul>
+                <div class="portfolioGrid">
+                    <div class="portfolioTile">
+                        <div class="overlay"></div>
+                        <img src="./assets/project1pic.png" alt="PSD conversion with only floats.">
+                    </div>
+                    <div class="portfolioTile">
+                        <div class="overlay"></div>
+                        <img src="./assets/project2pic.png" alt="PSD conversion.">
+                    </div>
+                    <div class="portfolioTile">
+                        <div class="overlay"></div>
+                        <img src="./assets/project3pic.png" alt="Toronto Ipsum Generator.">
+                    </div>
+                    <div class="portfolioTile">
+                        <div class="overlay"></div>
+                        <img src="./assets/project4pic.png" alt="What's Playing movie suggestion app.">
+                    </div>
+                    <div class="portfolioTile">
+                        <div class="overlay"></div>
+                        <img src="./assets/project5pic.png" alt="School database app made using React.">
+                    </div>
+                    <div class="portfolioTile">
+                        <div class="overlay"></div>
+                        <img src="./assets/project6pic.png" alt="The wise mist maze game made using React">
+                    </div>
+                </div>
+                <!-- portfolioGrid -->
+            </div>
+            <!-- innerWrapper -->
+        </div>
+        <!-- outerWrapper -->
     </section>
 
     <section class="contact">
