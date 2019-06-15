@@ -1,0 +1,66 @@
+//styling components that come with jquery-modal library
+
+.blocker {
+    background-color: rgba(237, 247, 252, 0.7);
+} 
+
+.modal {
+    background-color: $background;
+    border-radius: 10px;
+    max-width: 70%;
+    box-shadow: 0 25px 20px -15px $links, 0px 0px 20px 5px $links;  
+    padding: 0;
+}
+
+.modal a.close-modal {
+    top: 12.5px;
+    right: 12.5px;
+    height: 15px;
+    width: 15px;
+    background-image: url("../assets/003-cancel.svg");
+}
+
+//custom components
+.modalWrapper {
+    display: flex;
+}
+
+.projImg {
+    flex-basis: 50%;
+}
+
+.projImg img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.projDesc {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.modal h3{
+    flex-basis: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.modal a,
+.modal p {
+    font-size: 0.9rem;
+    display: inline;
+}
+
+.modal a {
+    color: $accent;
+    margin: 10px 0;
+}
+
+
+.projDesc p:last-of-type {
+    margin-bottom: 50px;
+}

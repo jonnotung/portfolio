@@ -507,6 +507,16 @@ section.profile {
   text-align: center;
 }
 
+.portfolioTile {
+  display: block;
+  position: relative;
+}
+
+.portfolioTile:hover {
+  -webkit-box-shadow: 0 25px 20px -15px #ff3511;
+          box-shadow: 0 25px 20px -15px #ff3511;
+}
+
 .portfolio button {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -520,5 +530,79 @@ section.profile {
   border-radius: 50px;
   background-color: #ff3511;
   color: #f3f6ff;
+}
+
+.blocker {
+  background-color: rgba(237, 247, 252, 0.7);
+}
+
+.modal {
+  background-color: #f3f6ff;
+  border-radius: 10px;
+  max-width: 70%;
+  -webkit-box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
+          box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
+  padding: 0;
+}
+
+.modal a.close-modal {
+  top: 12.5px;
+  right: 12.5px;
+  height: 15px;
+  width: 15px;
+  background-image: url("../assets/003-cancel.svg");
+}
+
+.modalWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projImg {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.projImg img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.projDesc {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+}
+
+.modal h3 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.modal a,
+.modal p {
+  font-size: 0.9rem;
+  display: inline;
+}
+
+.modal a {
+  color: #ff3511;
+  margin: 10px 0;
+}
+
+.projDesc p:last-of-type {
+  margin-bottom: 50px;
 }
 /*# sourceMappingURL=styles.css.map */

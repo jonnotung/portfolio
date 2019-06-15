@@ -12,11 +12,14 @@
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <!-- google fonts link -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- jquery-modal stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Jonathan Tung - Web Developer</title>
 </head>
+
 <body class="main">
-    <header>
+    <header id="main">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <nav>
@@ -27,9 +30,10 @@
                         </button>
                     </div>
                     <ul class="hiddenNav">
-                        <li><a href="">Main</a></li>
-                        <li><a href="">Portfolio</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#main">Main</a></li>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="headerInfo">
@@ -62,7 +66,7 @@
         <!-- outerWrapper -->
     </header>
 
-    <section class="profile">
+    <section class="profile" id="profile">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <article class="profileMain">
@@ -190,7 +194,7 @@
         <!-- outerWrapper -->
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <ul class="portfolioNav">
@@ -201,30 +205,115 @@
                         <button class="portfolioNavPub">Publications</button>
                     </li>
                 </ul>
+
                 <div class="portfolioGrid">
-                    <div class="portfolioTile">
+                    <a class="portfolioTile" href="#proj1" proj1>
                         <div class="overlay"></div>
                         <img src="./assets/project1pic.png" alt="PSD conversion with only floats.">
+                    </a>
+                    <div id="proj1" class="modal">
+                        <div class="modalWrapper">
+                            <div class="projImg">
+                                <img src="./assets/project1pic.png" alt="PSD conversion with only floats">
+                            </div>
+                            <div class="projDesc">
+                                <h3>Foot Forward</h3>
+                                <p >PSD conversion</p>
+                                <a href="https://jonnotung.github.io/jonathanTungProjectOne/">https://jonnotung.github.io/jonathanTungProjectOne</a>
+                                
+                                <p>This was a PSD conversion project that was restricted to using only HTML and CSS floats to lay out the webpage design. Made in 1 week during Hackeryou's web development immersive program.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolioTile">
+
+                    <a class="portfolioTile" href="#proj2" proj2>
                         <div class="overlay"></div>
                         <img src="./assets/project2pic.png" alt="PSD conversion.">
+                    </a>
+                    <div id="proj2" class="modal">
+                        <div class="modalWrapper">
+                            <div class="projImg">
+                                <img src="./assets/project2pic.png" alt="Multi-page PSD conversion.">
+                            </div>
+                            <div class="projDesc">
+                                <h3>Mind 'n Soul</h3>
+                                <p>PSD conversion</p>
+                                <a href="https://jonnotung.github.io/jonathanTungProject2/">https://jonnotung.github.io/jonathanTungProject2</a>
+                                <p>This was a PSD conversion project for a multi-page website using only HTML and CSS. Made in 1 week during Hackeryou's web development immersive program.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolioTile">
+
+                    <a class="portfolioTile" href="#proj3" proj3>
                         <div class="overlay"></div>
                         <img src="./assets/project3pic.png" alt="Toronto Ipsum Generator.">
+                    </a>
+                    <div id="proj3" class="modal">
+                        <div class="modalWrapper">
+                            <div class="projImg">
+                                <img src="./assets/project3pic.png" alt="Toronto-themed filler text generator.">
+                            </div>
+                            <div class="projDesc">
+                                <h3>Toronto Ipsum Generator</h3>
+                                <p>JQuery-based web app</p>
+                                <a href="https://jonnotung.github.io/jonathan-tung-project-3/">https://jonnotung.github.io/jonathan-tung-project-3</a>
+                                <p>This is a web app made using HTML, CSS and Javascript/JQuery. It generates randomized filler text with Toronto themed words. Users can select the number and size of paragraphs they want generated, and choose to include sports and slang words in the generated text. Made in 1 week during Hackeryou's web development immersive program.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolioTile">
+
+                    <a class="portfolioTile" href="#proj4" proj4>
                         <div class="overlay"></div>
                         <img src="./assets/project4pic.png" alt="What's Playing movie suggestion app.">
+                    </a>
+                    <div id="proj4" class="modal">
+                        <div class="modalWrapper">
+                            <div class="projImg">
+                                <img src="./assets/project4pic.png" alt="API-based movie suggestion web app.">
+                            </div>
+                            <div class="projDesc">
+                                <h3>What's playing?</h3>
+                                <p>JQuery-based web app</p>
+                                <a href="https://jonnotung.github.io/whatsPlaying/">https://jonnotung.github.io/whatsPlaying/</a>
+                                <p>This is a web app made using HTML, CSS and Javascript/JQuery. Users input the era and genre of movie they want to see, and the app dynamically selects 3 actors who match these selections. Users then select one of these actors and a movie suggestion, along with synopsis and poster image, is displayed. Utilizes the The Movie Database API. Made in 1 week by paired-programming with <a href="https://twitter.com/DarwinLyons">@DarwinLyons</a> during Hackeryou's web development immersive program.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolioTile">
-                        <div class="overlay"></div>
+
+                    <a class="portfolioTile" href="#proj5" proj5>
+                        
                         <img src="./assets/project5pic.png" alt="School database app made using React.">
+                    </a>
+                    <div id="proj5" class="modal">
+                        <div class="modalWrapper">
+                            <div class="projImg">
+                                <img src="./assets/project5pic.png" alt="School database app made using React.">
+                            </div>
+                            <div class="projDesc">
+                                <h3>Class database</h3>
+                                <p>React-based web app</p>
+                                <a href="https://jonnotung.github.io/JonathanTungProject5/">https://jonnotung.github.io/JonathanTungProject5/</a>
+                                <p>This is a web app made using the React framework, utilizing Firebase as a database. Users can add students and the classes they are enrolled in into a database. Students can be searched for and their enrollment information updated. A stats tab gives summaries of what's in the database: students and what classes they are in, and classes and which students are taking them. Made in 1 week during Hackeryou's web development immersive program.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolioTile">
+
+                    <a class="portfolioTile" href="#proj6" proj6>
                         <div class="overlay"></div>
-                        <img src="./assets/project6pic.png" alt="The wise mist maze game made using React">
+                        <img src="./assets/project6pic.png" alt="The wise mist: A maze game made using React">
+                    </a>
+                    <div id="proj6" class="modal">
+                        <div class="modalWrapper">
+                            <div class="projImg">
+                                <img src="./assets/project6pic.png" alt="The wise mist: A maze game made using React">
+                            </div>
+                            <div class="projDesc">
+                                <h3>The wise mist</h3>
+                                <p>React-based web game</p>
+                                <a href="https://jonnotung.github.io/JonathanTungProject5/">https://jonnotung.github.io/JonathanTungProject5/</a>
+                                <p>This is a web app made using the React framework. Users enter their name and a keyword at the start. They then navigate a maze with moving obstacles to reach the wise mist at the end, which will give a personalized piece of advice based on the keyword entered at the start. Utilizes the advice slip API. Made in 1 week with <a href="https://twitter.com/derekmurr">@derekmurr</a>, <a href="https://twitter.com/jonathanmcodes">@jonathanmcodes</a> and <a href="https://twitter.com/sooyshim">@sooyshim</a> during Hackeryou's web development immersive program.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- portfolioGrid -->
@@ -244,6 +333,8 @@
 
     <!-- jquery link -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <!-- jquery-modal library link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="./scripts/scripts.js"></script>
 </body>
 </html>

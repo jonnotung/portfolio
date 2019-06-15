@@ -19,6 +19,29 @@
     text-align: center;
 }
 
+.portfolioTile {
+    display: block;
+    position: relative;
+}
+
+.portfolioTile:hover {
+    box-shadow: 0 25px 20px -15px $accent;  
+}
+
+// .overlay {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: $background;
+//     opacity: 0.4;
+// }
+
+// .overlay:hover {
+//     opacity: 0;
+// }
+
 //portfolio nav
 .portfolio button {
     appearance: none;

@@ -61,6 +61,14 @@ app.init = function() {
     app.expandNav();
     app.swapToProjects();
     app.swapToPublications();
+
+    //set fade duration for project modals
+    $(`.portfolioTile`).click(function(event) {
+        $(this).modal({
+            fadeDuration: 150
+        });
+        return false;
+    });
 }
 
 // document ready
