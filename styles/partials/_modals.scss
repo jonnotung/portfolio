@@ -7,7 +7,7 @@
 .modal {
     background-color: $background;
     border-radius: 10px;
-    max-width: 70%;
+    max-width: 80%;
     box-shadow: 0 25px 20px -15px $links, 0px 0px 20px 5px $links;  
     padding: 0;
 }
@@ -26,7 +26,7 @@
 }
 
 .projImg {
-    flex-basis: 50%;
+    width: 50%;
 }
 
 .projImg img {
@@ -37,30 +37,46 @@
 .projDesc {
     flex-basis: 50%;
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
 }
 
 .modal h3{
-    flex-basis: 100%;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    margin: 10px 0 25px 0;
     text-transform: capitalize;
 }
 
 .modal a,
 .modal p {
     font-size: 0.9rem;
-    display: inline;
+    
+    margin-bottom: 25px;
 }
 
 .modal a {
     color: $accent;
-    margin: 10px 0;
 }
 
+.projDesc a ~ p {
+    margin-bottom: 75px;
+}
 
-.projDesc p:last-of-type {
-    margin-bottom: 50px;
+.projIcons {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+.projIcons .skillIcons {
+    margin-right: 25px;
+}
+
+.projIcons p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.projIcons p {
+    margin-right: 3px;
 }

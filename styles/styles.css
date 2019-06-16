@@ -206,12 +206,16 @@ img {
   height: 100%;
 }
 
+input {
+  display: block;
+}
+
 body {
   background-color: #f3f6ff;
 }
 
 .outerWrapper {
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -228,6 +232,7 @@ body {
 
 p {
   font-size: 1rem;
+  line-height: 1.85rem;
 }
 
 .hiddenNav {
@@ -273,6 +278,7 @@ header nav {
           justify-content: flex-start;
   color: #f3f6ff;
   position: fixed;
+  z-index: 10;
   top: 4vh;
   margin: 0 0 0 5%;
 }
@@ -283,7 +289,7 @@ header nav {
   background-color: #ff3511;
   color: #f3f6ff;
   border-radius: 50%;
-  border: none;
+  border: 1px solid #f3f6ff;
   margin: 0 50px 0 0;
   text-align: center;
   font-size: 1.75rem;
@@ -306,6 +312,7 @@ nav ul {
   width: 50%;
   padding: 12px 30px;
   border-radius: 50px;
+  border: 1px solid #f3f6ff;
   background-color: #ff3511;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -391,12 +398,11 @@ header p {
 
 section.profile {
   min-height: 100vh;
-  margin-top: 2.5vh;
 }
 
 .profileMain,
 .profileAside {
-  padding-top: 25px;
+  padding-top: 4vh;
 }
 
 .profile h3 {
@@ -481,8 +487,11 @@ section.profile {
 }
 
 .portfolio {
-  margin-top: 17.5vh;
-  padding-bottom: 20vh;
+  min-height: 100vh;
+}
+
+.portfolio .innerWrapper {
+  padding-top: 1vh;
 }
 
 .portfolioNav {
@@ -512,9 +521,13 @@ section.profile {
   position: relative;
 }
 
+.portfolioTile img {
+  border-radius: 10px;
+}
+
 .portfolioTile:hover {
-  -webkit-box-shadow: 0 25px 20px -15px #ff3511;
-          box-shadow: 0 25px 20px -15px #ff3511;
+  -webkit-box-shadow: 0 25px 30px -15px #ff3511;
+          box-shadow: 0 25px 30px -15px #ff3511;
 }
 
 .portfolio button {
@@ -539,7 +552,7 @@ section.profile {
 .modal {
   background-color: #f3f6ff;
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 80%;
   -webkit-box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
           box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
   padding: 0;
@@ -560,8 +573,7 @@ section.profile {
 }
 
 .projImg {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  width: 50%;
 }
 
 .projImg img {
@@ -575,34 +587,164 @@ section.profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 20px;
 }
 
 .modal h3 {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin: 10px 0 25px 0;
   text-transform: capitalize;
 }
 
 .modal a,
 .modal p {
   font-size: 0.9rem;
-  display: inline;
+  margin-bottom: 25px;
 }
 
 .modal a {
   color: #ff3511;
-  margin: 10px 0;
 }
 
-.projDesc p:last-of-type {
-  margin-bottom: 50px;
+.projDesc a ~ p {
+  margin-bottom: 75px;
+}
+
+.projIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.projIcons .skillIcons {
+  margin-right: 25px;
+}
+
+.projIcons p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.projIcons p {
+  margin-right: 3px;
+}
+
+.contact h3 {
+  padding: 4vh 0;
+  text-transform: capitalize;
+}
+
+input {
+  width: 100%;
+  background-color: #f3f6ff;
+  border: none;
+  border-bottom: 2px solid #7d7d7d;
+  color: #7d7d7d;
+  padding: 15px 0px;
+  margin-bottom: 25px;
+}
+
+.contactNameEmail .inputWrapper {
+  width: 48%;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputFocusTag {
+  display: none;
+}
+
+input:focus {
+  border-bottom: 2px solid #ff3511;
+}
+
+input:focus ~ .inputFocusTag {
+  display: inline;
+  text-transform: capitalize;
+  color: #7d7d7d;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.contactNameEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactSend {
+  border: 2px solid #ff3511;
+  background-color: #f3f6ff;
+  color: #ff3511;
+  padding: 5px 35px;
+  margin: 30px 0 0 0;
+  border-radius: 50px;
+}
+
+.contactSend:hover {
+  color: #7d7d7d;
+}
+
+.contactSend:active {
+  background-color: #ff3511;
+  color: #f3f6ff;
+}
+
+footer {
+  margin-top: 5vh;
+}
+
+.footerWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer a {
+  font-size: 1rem;
+}
+
+.footerLeft,
+.footerRight {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .profileKey,
+footer .profileValue {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.footerSocial {
+  margin: 5vh 0 0 0;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */

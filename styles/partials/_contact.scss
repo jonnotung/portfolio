@@ -1,0 +1,102 @@
+//contact form
+.contact h3 {
+    padding: 4vh 0;
+    text-transform: capitalize;
+}
+
+input {
+    width: 100%;
+    background-color: $background;
+    border: none;
+    border-bottom: 2px solid $lightText;
+    color: $lightText;
+    padding: 15px 0px;
+    margin-bottom: 25px;
+}
+
+.contactNameEmail .inputWrapper {
+    width: 48%;
+}
+
+.inputWrapper {
+    position: relative;
+    
+}
+
+.inputFocusTag {
+    display: none;
+}
+
+
+input:focus {
+    border-bottom: 2px solid $accent;
+}
+
+input:focus ~ .inputFocusTag {
+    display: inline;
+    text-transform: capitalize;
+    color: $lightText;
+    font-size: 0.75rem;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.contactNameEmail {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contactSend {
+    border: 2px solid $accent;
+    background-color: $background;
+    color: $accent;
+    padding: 5px 35px;
+    margin: 30px 0 0 0;
+    border-radius: 50px;
+}
+
+.contactSend:hover {
+    
+    color: $lightText;
+}
+
+.contactSend:active {
+    background-color: $accent;
+    color: $background;
+}
+
+//footer section
+footer {
+    margin-top: 5vh;
+}
+
+.footerWrap {
+    width: 100%;
+    display: flex;
+}
+
+footer a {
+    font-size: 1rem;
+}
+
+.footerLeft, 
+.footerRight {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .profileKey,
+footer .profileValue {
+    flex-basis: 50%;
+}
+
+.footerSocial {
+    margin: 5vh 0 0 0;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}

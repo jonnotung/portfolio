@@ -4,6 +4,7 @@ app = {};
 //DOM references
 app.$navButton = $(`.navExpandWrap`);
 app.$navBar = $(`nav ul`);
+app.$navLinks = $(`nav a`);
 app.$portfolioNavProj = $(`.portfolioNavProj `);
 app.$portfolioNavPub = $(`.portfolioNavPub `);
 
@@ -38,6 +39,18 @@ app.expandNav = function() {
     }); 
 } 
 
+app.linkCloseNav = function() {
+    app.$navLinks.on(`click`, function() {
+        app.$navButton.html(
+            `<label class="visuallyHidden">Expand navbar</label>
+            <button class="navExpand" tabindex=0>
+                <i class="fas fa-bars"></i>
+            </button>`
+        ).fadeIn();
+        app.$navBar.toggleClass(`hiddenNav`);
+    });
+}
+
 //function to swap to projects in portfolio
 app.swapToProjects = function() {
     app.$portfolioNavProj.on(`click`, function() {
@@ -59,6 +72,7 @@ app.swapToPublications = function() {
 //initialization wrapper function
 app.init = function() {
     app.expandNav();
+    app.linkCloseNav();
     app.swapToProjects();
     app.swapToPublications();
 
