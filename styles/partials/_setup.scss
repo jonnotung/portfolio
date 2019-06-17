@@ -30,7 +30,7 @@ h1 {
 a {
     appearance: none;
     text-decoration: none; 
-    color: black;
+    color: $text;
 }
 
 li {
@@ -67,7 +67,6 @@ body {
 //------typography----------------
 //--------------------------------
 
-
 p {
     font-size: 1rem;
     line-height: 1.85rem;
@@ -90,6 +89,25 @@ a:focus {
     outline: 2px solid $focus;
 }
 
+.skillIcons:hover {
+    animation: jelly 0.4s;
+}
+
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
 
 //-----------------------------------
 //------responsive media queries-----
