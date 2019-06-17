@@ -1,6 +1,7 @@
 //contact form
 .contact {
     min-height: 60vh;
+    margin-top: 10vh;
 }
 
 .contact h3 {
@@ -116,6 +117,11 @@ footer .profileValue {
 
 footer a:hover {
     color: $accent;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 //--------------------------------------------

@@ -8,3 +8,14 @@ $text: #181f33;
 $lightText: #7d7d7d;
 $links: #838383;
 $focus: #4b89ed;
+
+
+//------------------
+//----mixins--------
+//------------------
+@mixin modalImage($picURL, $size) {
+    background-image: url($picURL);
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

@@ -15,8 +15,8 @@
 .modal a.close-modal {
     top: 12.5px;
     right: 12.5px;
-    height: 15px;
-    width: 15px;
+    height: 25px;
+    width: 25px;
     background-image: url("../assets/003-cancel.svg");
 }
 
@@ -27,11 +27,41 @@
 
 .projImg {
     width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.proj1 {
+    @include modalImage("../assets/project1modal.png", cover);
+}
+
+.proj2 {
+    @include modalImage("../assets/project2modal.png", cover);
+}
+
+.proj3 {
+    @include modalImage("../assets/project3modal.png", cover);
+}
+
+.proj4 {
+    @include modalImage("../assets/project4modal.png", cover);
+    background-position: 0% 50%;
+}
+
+.proj5 {
+    @include modalImage("../assets/project5modal.png", cover);
+    background-position: 0% 50%;
+}
+
+.proj6 {
+    @include modalImage("../assets/project6pic.png", cover);
 }
 
 .projImg img {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    display: none;
+    // width: 100%;
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
 }
 
 .projDesc {
@@ -66,13 +96,22 @@
 }
 
 .projIcons {
-    display: flex;
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    // display: grid;
+    //3 rows of 4 columns
+    // grid-auto-columns: repeat(4, 1fr);
+    // grid-auto-rows: repeat(1, 1fr);
 }
 
 .projIcons .skillIcons {
     margin-right: 25px;
+}
+
+.firebaseIcon {
+    width: 2rem;
 }
 
 .projIcons p {
@@ -82,4 +121,61 @@
 
 .projIcons p {
     margin-right: 3px;
+}
+
+//-----------------------------------
+//------responsive media queries-----
+//-----------------------------------
+
+@media (max-width: 1050px) {
+    .modalImg {
+        display: none;
+    }
+
+    .projImg {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+}
+
+@media (max-width: 950px) {
+    .modalWrapper {
+        flex-direction: column;
+    }
+
+    .projImg {
+        width: 80%;
+        // background-size: cover;
+        height: 60vh;
+        margin: 40px auto 0 auto;
+        border-radius: 10px;
+    }
+
+    .projDesc {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .projImg {
+        width: 75%;
+        height: 40vh;
+        margin: 50px auto 0 auto;
+    }
+
+    .projIcons {
+        grid-auto-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .projImg {
+        height: 30vh;
+    }
+
+    .projIcons {
+        grid-auto-columns: repeat(2, 1fr);
+        // grid-auto-rows: repeat(3, 1.5fr);
+    }
 }

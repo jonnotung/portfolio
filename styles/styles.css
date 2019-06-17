@@ -236,7 +236,7 @@ p {
 }
 
 .hiddenNav {
-  opacity: 0;
+  display: none;
 }
 
 header button {
@@ -279,7 +279,7 @@ header .innerWrapper {
 }
 
 header nav {
-  width: 100%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,6 +290,7 @@ header nav {
   position: fixed;
   z-index: 10;
   top: 4vh;
+  left: 0;
   margin: 0 0 0 5%;
 }
 
@@ -319,7 +320,7 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 50vw;
   padding: 12px 30px;
   border-radius: 50px;
   border: 1px solid #f3f6ff;
@@ -395,7 +396,7 @@ header p {
 
 @media (max-width: 800px) {
   nav ul {
-    width: 75%;
+    width: 75vw;
   }
   .headerSocialIcons {
     width: 50%;
@@ -414,6 +415,9 @@ header p {
     height: 40px;
     font-size: 1.25rem;
     line-height: 31px;
+  }
+  header nav {
+    left: 0;
   }
   nav ul {
     -webkit-box-orient: vertical;
@@ -491,6 +495,10 @@ section.profile {
 .skillIcons {
   margin-bottom: 25px;
   font-size: 2rem;
+}
+
+.dbIcon {
+  fill: #181f33;
 }
 
 .profileAside {
@@ -644,8 +652,8 @@ section.profile {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (19.75vw)[2];
-      grid-template-rows: repeat(2, 19.75vw);
+  -ms-grid-rows: (18vw)[2];
+      grid-template-rows: repeat(2, 18vw);
   width: 100%;
   height: 100%;
   grid-gap: 10%;
@@ -655,6 +663,7 @@ section.profile {
   display: block;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .portfolioTile img {
@@ -664,6 +673,46 @@ section.profile {
 .portfolioTile:hover {
   -webkit-box-shadow: 0 25px 30px -15px #ff3511;
           box-shadow: 0 25px 30px -15px #ff3511;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: rgba(255, 53, 17, 0.9);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.overlay svg {
+  height: 25%;
+  width: 25%;
+  fill: #f3f6ff;
+}
+
+.overlay p {
+  font-size: 1.5rem;
+  color: #f3f6ff;
+}
+
+.overlay:hover {
+  opacity: 1;
 }
 
 .portfolio button {
@@ -690,8 +739,11 @@ section.profile {
         grid-template-rows: repeat(3, 34.5vw);
   }
   .portfolio {
-    padding: 1vh 25px 0 25px;
+    padding: 1vh 0 0 0;
     margin-bottom: 15vh;
+  }
+  .portfolio .innerWrapper {
+    padding: 0 25px 0 25px;
   }
 }
 
@@ -699,11 +751,17 @@ section.profile {
   .portfolio {
     margin-bottom: 5vh;
   }
+  .overlay p {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 500px) {
   .portfolio {
     margin-bottom: -5vh;
+  }
+  .overlay p {
+    font-size: 0.75rem;
   }
 }
 
@@ -729,8 +787,8 @@ section.profile {
 .modal a.close-modal {
   top: 12.5px;
   right: 12.5px;
-  height: 15px;
-  width: 15px;
+  height: 25px;
+  width: 25px;
   background-image: url("../assets/003-cancel.svg");
 }
 
@@ -742,11 +800,56 @@ section.profile {
 
 .projImg {
   width: 50%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.proj1 {
+  background-image: url("../assets/project1modal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.proj2 {
+  background-image: url("../assets/project2modal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.proj3 {
+  background-image: url("../assets/project3modal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.proj4 {
+  background-image: url("../assets/project4modal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 0% 50%;
+}
+
+.proj5 {
+  background-image: url("../assets/project5modal.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 0% 50%;
+}
+
+.proj6 {
+  background-image: url("../assets/project6pic.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .projImg img {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  display: none;
 }
 
 .projDesc {
@@ -789,15 +892,21 @@ section.profile {
 }
 
 .projIcons {
+  width: 100%;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .projIcons .skillIcons {
   margin-right: 25px;
+}
+
+.firebaseIcon {
+  width: 2rem;
 }
 
 .projIcons p {
@@ -809,8 +918,58 @@ section.profile {
   margin-right: 3px;
 }
 
+@media (max-width: 1050px) {
+  .modalImg {
+    display: none;
+  }
+  .projImg {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .modalWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projImg {
+    width: 80%;
+    height: 60vh;
+    margin: 40px auto 0 auto;
+    border-radius: 10px;
+  }
+  .projDesc {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .projImg {
+    width: 75%;
+    height: 40vh;
+    margin: 50px auto 0 auto;
+  }
+  .projIcons {
+    grid-auto-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .projImg {
+    height: 30vh;
+  }
+  .projIcons {
+    grid-auto-columns: repeat(2, 1fr);
+  }
+}
+
 .contact {
   min-height: 60vh;
+  margin-top: 10vh;
 }
 
 .contact h3 {
@@ -936,6 +1095,11 @@ footer .profileValue {
 
 footer a:hover {
   color: #ff3511;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 925px) {
