@@ -50,11 +50,14 @@
 .modal a,
 .modal p {
     font-size: 0.9rem;
-    
     margin-bottom: 25px;
 }
 
 .modal a {
+    color: $links;
+}
+
+.projDesc a:hover {
     color: $accent;
 }
 

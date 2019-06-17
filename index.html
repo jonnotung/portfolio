@@ -18,8 +18,8 @@
     <title>Jonathan Tung - Web Developer</title>
 </head>
 
-<body class="main">
-    <header id="main">
+<body>
+    <header id="main" class="linkSection">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <nav>
@@ -52,6 +52,9 @@
                         <a href="https://github.com/jonnotung">
                             <label class="visuallyHidden">Github</label><i class="fab fa-github"></i>
                         </a>
+                        <a href="https://medium.com/@jonathan.k.tung">
+                            <label class="visuallyHidden">Medium</label><i class="fab fa-medium"></i>
+                        </a>
                     </div>
                     <a href="" class="headerResume">
                         <i class="far fa-arrow-alt-circle-down"></i>Resume
@@ -66,7 +69,7 @@
         <!-- outerWrapper -->
     </header>
 
-    <section class="profile" id="profile">
+    <section class="profile linkSection" id="profile">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <article class="profileMain">
@@ -194,16 +197,16 @@
         <!-- outerWrapper -->
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio linkSection" id="portfolio">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <ul class="portfolioNav">
                     <li>
                         <button class="portfolioNavProj selected">Projects</button>
                     </li>
-                    <li>
+                    <!-- <li>
                         <button class="portfolioNavPub">Publications</button>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <div class="portfolioGrid">
@@ -422,7 +425,7 @@
         <!-- outerWrapper -->
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact linkSection" id="contact">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <h3>Contact me</h3>
@@ -430,7 +433,7 @@
                     <div class="contactNameEmail">
                         <div class="inputWrapper">
                             <label for="name" class="visuallyHidden">Your name</label>
-                            <input type="text" name="name" id="name" placeholder="Your name" class="name">
+                            <input type="text" name="name" id="name" placeholder="Your name" class="name" onfocus="">
                             <span class="inputFocusTag">Your name</span>
                         </div>
 
@@ -463,7 +466,7 @@
                 <div class="footerWrap">
                     <div class="footerLeft">
                         <p class="profileKey">Email:</p>
-                        <a href="mail:to:jonathan@jonathantung.dev">jonathan@jonathantung.dev</a>
+                        <a class="profileValue" href="mail:to:jonathan@jonathantung.dev">jonathan@jonathantung.dev</a>
                         <p class="profileKey">Location:</p>
                         <p>Toronto, Ontario, Canada</p>
                     </div>
@@ -482,6 +485,9 @@
                     </a>
                     <a href="https://github.com/jonnotung">
                         <label class="visuallyHidden">Github</label><i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://medium.com/@jonathan.k.tung">
+                        <label class="visuallyHidden">Medium</label><i class="fab fa-medium"></i>
                     </a>
                 </div>
                 <!-- footerSocial -->

@@ -1,4 +1,8 @@
 //contact form
+.contact {
+    min-height: 60vh;
+}
+
 .contact h3 {
     padding: 4vh 0;
     text-transform: capitalize;
@@ -58,18 +62,15 @@ input:focus ~ .inputFocusTag {
 }
 
 .contactSend:hover {
-    
-    color: $lightText;
-}
-
-.contactSend:active {
     background-color: $accent;
     color: $background;
 }
 
+
 //footer section
 footer {
     margin-top: 5vh;
+    border-top: 2px solid $links;
 }
 
 .footerWrap {
@@ -81,6 +82,10 @@ footer a {
     font-size: 1rem;
 }
 
+footer h2 {
+    margin: 4vh 0; 
+}
+
 .footerLeft, 
 .footerRight {
     width: 50%;
@@ -88,15 +93,27 @@ footer a {
     flex-wrap: wrap;
 }
 
-footer .profileKey,
+footer .profileKey {
+    flex-basis: 25%;
+    color: $links;
+}
+
 footer .profileValue {
-    flex-basis: 50%;
+    flex-basis: 75%;
 }
 
 .footerSocial {
-    margin: 5vh 0 0 0;
+    margin: 5vh 0 5vh 0;
     width: 25%;
     display: flex;
     justify-content: space-between;
+}
+
+.footerSocial a {
     font-size: 2rem;
+    color: $links;
+}
+
+footer a:hover {
+    color: $accent;
 }

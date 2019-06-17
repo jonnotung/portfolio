@@ -7,6 +7,8 @@ app.$navBar = $(`nav ul`);
 app.$navLinks = $(`nav a`);
 app.$portfolioNavProj = $(`.portfolioNavProj `);
 app.$portfolioNavPub = $(`.portfolioNavPub `);
+//sections for nav bar high lighting
+app.$sections = $(`.linkSection`);
 
 //'global' variables
 //keeps track if nav is expanded or not
@@ -39,6 +41,7 @@ app.expandNav = function() {
     }); 
 } 
 
+//function to close nav whenever a nav link is clicked
 app.linkCloseNav = function() {
     app.$navLinks.on(`click`, function() {
         app.$navButton.html(
@@ -69,17 +72,40 @@ app.swapToPublications = function() {
     })
 }
 
+//function to high light nav link corresponding to section the user is in
+app.scrollHighlightNav = function() {
+    $(document).on(`scroll`, event => {
+        let fromTop = $(document).scrollTop();
+        
+        //iterate over sections the nav links to
+        Object.entries(app.$navLinks).forEach( link => {
+            let section = $(`${link[1].hash}`);
+            if(section.length > 0) {
+                //check if user is in a section
+                if(section[0].offsetTop <= fromTop && section[0].offsetTop + section[0].offsetHeight > fromTop) {
+                    //if we are in the section give the corresponding nav link the current class
+                   $(app.$navLinks[link[0]]).addClass(`current`);
+                } else {
+                    //otherwise remove the current class from nav link
+                    $(app.$navLinks[link[0]]).removeClass(`current`);
+                }
+            }
+        })
+    })
+}
+
 //initialization wrapper function
 app.init = function() {
     app.expandNav();
     app.linkCloseNav();
     app.swapToProjects();
     app.swapToPublications();
+    app.scrollHighlightNav();
 
     //set fade duration for project modals
     $(`.portfolioTile`).click(function(event) {
         $(this).modal({
-            fadeDuration: 150
+            fadeDuration: 200
         });
         return false;
     });

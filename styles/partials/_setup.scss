@@ -12,6 +12,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 //---------------------------------
 //----removing default stylings----
 //---------------------------------
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $text;
+    font-size: 125%;
+}
+
 h1, h2, h3, p, li, ul {
     margin: 0;
     padding: 0;
@@ -60,11 +66,7 @@ body {
 //--------------------------------
 //------typography----------------
 //--------------------------------
-body {
-    font-family: 'Poppins', sans-serif;
-    color: $text;
-    font-size: 125%;
-}
+
 
 p {
     font-size: 1rem;
@@ -86,4 +88,14 @@ header button {
 
 a:focus {
     outline: 2px solid $focus;
+}
+
+
+//-----------------------------------
+//------responsive media queries-----
+//-----------------------------------
+@media (max-width: 500px) {
+    html {
+        font-size: 90%;
+    }
 }
