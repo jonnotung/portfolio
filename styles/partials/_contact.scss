@@ -69,7 +69,7 @@ input:focus ~ .inputFocusTag {
 
 //footer section
 footer {
-    margin-top: 5vh;
+    margin-top: 15vh;
     border-top: 2px solid $links;
 }
 
@@ -83,7 +83,7 @@ footer a {
 }
 
 footer h2 {
-    margin: 4vh 0; 
+    margin: 10vh 0; 
 }
 
 .footerLeft, 
@@ -103,7 +103,7 @@ footer .profileValue {
 }
 
 .footerSocial {
-    margin: 5vh 0 5vh 0;
+    margin: 5vh 0 15vh 0;
     width: 25%;
     display: flex;
     justify-content: space-between;
@@ -116,4 +116,32 @@ footer .profileValue {
 
 footer a:hover {
     color: $accent;
+}
+
+//--------------------------------------------
+//------media queries for responsive----------
+//--------------------------------------------
+
+@media (max-width: 925px) {
+    .contact {
+        padding: 0 25px;
+    }
+    
+    .contactNameEmail {
+        display: block;
+    }
+
+    .contactNameEmail .inputWrapper {
+        width: 100%;
+    }
+
+    .footerSocial {
+        width: 50%;
+    }
+}
+
+@media (max-width: 550px) {
+    .footerSocial {
+        width: 85%;
+    }
 }

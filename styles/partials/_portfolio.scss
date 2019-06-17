@@ -3,43 +3,31 @@
 }
 
 .portfolio .innerWrapper {
-    padding-top: 1vh;
+    padding: 1vh 0 0 0;
 }
 
 .portfolioNav {
     margin: 30px auto 60px auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 
 .portfolioGrid {
     display: grid;
     //2 rows of 3 columns
-    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
-  grid-auto-rows: 1fr;
-    // grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 19.75vw);
+    width: 100%;
+    height: 100%;
+    grid-gap: 10%;
 }
-
-//from krystof korb to get square tiles
-.portfolioGrid:before {
-    content: "";
-    width: 0;
-    padding-bottom: 100%;
-    grid-row: 1/1;
-    grid-column: 1/1;
-}
-
-.portfolioGrid > *:first-child {
-    grid-row: 1/1;
-    grid-column: 1/1;
-} 
-
 
 .portfolioTile {
     display: block;
+    width: 100%;
+    height: 100%;
 }
-
 
 
 .portfolioTile img {
@@ -63,6 +51,39 @@
     color: $background;
 }
 
-@media (max-width: 900px) {
+//--------------------------------------------
+//------media queries for responsive----------
+//--------------------------------------------
 
+
+@media (max-width: 925px) {
+    .portfolioGrid {
+        grid-gap: 5%;
+        //3 rows of 2 columns
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 34.5vw);
+    }
+
+    .portfolio {
+        padding: 1vh 25px 0 25px;
+        margin-bottom: 15vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio {
+        margin-bottom: 5vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .portfolio {
+        margin-bottom: -5vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .portfolio {
+        margin-bottom: -10vh;
+    }
 }
