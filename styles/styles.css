@@ -236,7 +236,11 @@ p {
 }
 
 .hiddenNav {
-  display: none;
+  margin-left: -100vw;
+}
+
+.noWidth {
+  width: 0;
 }
 
 header button {
@@ -252,47 +256,47 @@ a:focus {
 }
 
 .skillIcons:hover {
-  -webkit-animation: jelly 0.4s;
-          animation: jelly 0.4s;
+  -webkit-animation: jelly 0.5s;
+          animation: jelly 0.5s;
 }
 
 @-webkit-keyframes jelly {
   0%,
   100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   25% {
-    -webkit-transform: scale(0.9, 1.1);
-            transform: scale(0.9, 1.1);
+    -webkit-transform: rotate(2.5deg);
+            transform: rotate(2.5deg);
   }
   50% {
-    -webkit-transform: scale(1.1, 0.9);
-            transform: scale(1.1, 0.9);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
   75% {
-    -webkit-transform: scale(0.95, 1.05);
-            transform: scale(0.95, 1.05);
+    -webkit-transform: rotate(7.5deg);
+            transform: rotate(7.5deg);
   }
 }
 
 @keyframes jelly {
   0%,
   100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   25% {
-    -webkit-transform: scale(0.9, 1.1);
-            transform: scale(0.9, 1.1);
+    -webkit-transform: rotate(2.5deg);
+            transform: rotate(2.5deg);
   }
   50% {
-    -webkit-transform: scale(1.1, 0.9);
-            transform: scale(1.1, 0.9);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
   }
   75% {
-    -webkit-transform: scale(0.95, 1.05);
-            transform: scale(0.95, 1.05);
+    -webkit-transform: rotate(7.5deg);
+            transform: rotate(7.5deg);
   }
 }
 
@@ -304,6 +308,7 @@ a:focus {
 
 header {
   min-height: 100vh;
+  margin-bottom: 10vh;
 }
 
 header .innerWrapper {
@@ -523,7 +528,7 @@ section.profile {
 }
 
 .profileStory p {
-  color: #838383;
+  color: #181f33;
   margin-bottom: 50px;
 }
 
@@ -674,10 +679,6 @@ section.profile {
   }
 }
 
-.portfolio {
-  min-height: 100vh;
-}
-
 .portfolio .innerWrapper {
   padding: 1vh 0 0 0;
 }
@@ -775,6 +776,12 @@ section.profile {
   color: #f3f6ff;
 }
 
+@media (max-height: 500px) {
+  .portfolio {
+    margin-bottom: 10vh;
+  }
+}
+
 @media (max-width: 925px) {
   .portfolioGrid {
     grid-gap: 5%;
@@ -823,7 +830,7 @@ section.profile {
 .modal {
   background-color: #f3f6ff;
   border-radius: 10px;
-  max-width: 80%;
+  max-width: 100%;
   -webkit-box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
           box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
   padding: 0;
@@ -861,6 +868,7 @@ section.profile {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-position: 0% center;
 }
 
 .proj3 {
@@ -993,9 +1001,12 @@ section.profile {
 }
 
 @media (max-width: 550px) {
+  .modal {
+    width: 92%;
+  }
   .projImg {
     width: 75%;
-    height: 40vh;
+    height: 50vh;
     margin: 50px auto 0 auto;
   }
   .projIcons {
@@ -1014,7 +1025,7 @@ section.profile {
 
 .contact {
   min-height: 60vh;
-  margin-top: 10vh;
+  padding-top: 10vh;
 }
 
 .contact h3 {
@@ -1024,11 +1035,16 @@ section.profile {
 
 input {
   width: 100%;
-  background-color: #f3f6ff;
+  background-color: transparent;
   border: none;
+  border: 2px solid transparent;
   border-bottom: 2px solid #7d7d7d;
   color: #7d7d7d;
   padding: 15px 0px;
+}
+
+.contactNameEmail,
+.contactForm > .inputWrapper {
   margin-bottom: 25px;
 }
 
@@ -1042,20 +1058,45 @@ input {
 
 .inputFocusTag {
   display: none;
+  position: absolute;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ff3511;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 input:focus {
-  border-bottom: 2px solid #ff3511;
+  border-bottom: none;
+  outline: none;
 }
 
 input:focus ~ .inputFocusTag {
   display: inline;
   text-transform: capitalize;
   color: #7d7d7d;
-  font-size: 0.95rem;
-  position: absolute;
+  font-size: 0.75rem;
   top: -10px;
   left: 0;
+}
+
+input:focus ~ .underline {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .contactNameEmail {
@@ -1082,7 +1123,7 @@ input:focus ~ .inputFocusTag {
 }
 
 footer {
-  margin-top: 15vh;
+  margin-top: 10vh;
   border-top: 2px solid #838383;
 }
 
@@ -1147,6 +1188,12 @@ footer a:hover {
   margin-bottom: 25px;
 }
 
+@media (max-height: 650px) {
+  .contact {
+    margin-top: 20vh;
+  }
+}
+
 @media (max-width: 925px) {
   .contact {
     padding: 0 25px;
@@ -1156,6 +1203,9 @@ footer a:hover {
   }
   .contactNameEmail .inputWrapper {
     width: 100%;
+  }
+  .topInput {
+    margin-bottom: 25px;
   }
   .footerSocial {
     width: 50%;

@@ -4,6 +4,7 @@ app = {};
 //DOM references
 app.$navButton = $(`.navExpandWrap`);
 app.$navBar = $(`nav ul`);
+app.$navItems = $(`nav li`);
 app.$navLinks = $(`nav a`);
 app.$portfolioNavProj = $(`.portfolioNavProj `);
 app.$portfolioNavPub = $(`.portfolioNavPub `);
@@ -26,7 +27,7 @@ app.expandNav = function() {
                 <button class="navExpand" tabindex=0>
                     <i class="fas fa-bars"></i>
                 </button>`
-            ).fadeIn();
+            );
             app.$navBar.toggleClass(`hiddenNav`);
         } else {
             app.$navButton.html(
@@ -34,9 +35,10 @@ app.expandNav = function() {
                 <button class="navExpand" tabindex=0>
                     <i class="fas fa-times"></i>
                 </button>`
-            ).fadeIn();
+            );
             app.$navBar.toggleClass(`hiddenNav`);
         }
+        console.log(app.navExpanded);
         app.navExpanded = !app.navExpanded;
     }); 
 } 
@@ -53,6 +55,7 @@ app.linkCloseNav = function() {
         app.$navBar.toggleClass(`hiddenNav`);
     });
 }
+
 
 //function to swap to projects in portfolio
 app.swapToProjects = function() {
@@ -101,7 +104,6 @@ app.init = function() {
     app.swapToProjects();
     app.swapToPublications();
     app.scrollHighlightNav();
-
     //set fade duration for project modals
     $(`.portfolioTile`).click(function(event) {
         $(this).modal({

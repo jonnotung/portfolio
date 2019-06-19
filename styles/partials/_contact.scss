@@ -1,7 +1,7 @@
 //contact form
 .contact {
     min-height: 60vh;
-    margin-top: 10vh;
+    padding-top: 10vh;
 }
 
 .contact h3 {
@@ -11,17 +11,23 @@
 
 input {
     width: 100%;
-    background-color: $background;
+    background-color: transparent;
     border: none;
+    border: 2px solid transparent;
     border-bottom: 2px solid $lightText;
     color: $lightText;
     padding: 15px 0px;
+}
+
+.contactNameEmail,
+.contactForm > .inputWrapper {
     margin-bottom: 25px;
 }
 
 .contactNameEmail .inputWrapper {
     width: 48%;
 }
+
 
 .inputWrapper {
     position: relative;
@@ -30,21 +36,38 @@ input {
 
 .inputFocusTag {
     display: none;
+    position: absolute;
 }
 
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $accent;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
 
 input:focus {
-    border-bottom: 2px solid $accent;
+    border-bottom: none;
+    outline: none;
 }
 
 input:focus ~ .inputFocusTag {
     display: inline;
     text-transform: capitalize;
     color: $lightText;
-    font-size: 0.95rem;
-    position: absolute;
+    font-size: 0.75rem;
     top: -10px; 
     left: 0;
+}
+
+input:focus ~ .underline {
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
 
 .contactNameEmail {
@@ -70,7 +93,7 @@ input:focus ~ .inputFocusTag {
 
 //footer section
 footer {
-    margin-top: 15vh;
+    margin-top: 10vh;
     border-top: 2px solid $links;
 }
 
@@ -127,6 +150,11 @@ footer a:hover {
 //--------------------------------------------
 //------media queries for responsive----------
 //--------------------------------------------
+@media(max-height: 650px) {
+    .contact {
+        margin-top: 20vh; 
+    }
+}
 
 @media (max-width: 925px) {
     .contact {
@@ -141,6 +169,10 @@ footer a:hover {
         width: 100%;
     }
 
+    .topInput {
+        margin-bottom: 25px;
+    }
+
     .footerSocial {
         width: 50%;
     }
@@ -151,3 +183,4 @@ footer a:hover {
         width: 85%;
     }
 }
+

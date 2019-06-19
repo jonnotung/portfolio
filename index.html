@@ -32,7 +32,7 @@
                     <ul class="hiddenNav">
                         <li><a href="#main">Main</a></li>
                         <li><a href="#profile">Profile</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -73,7 +73,7 @@
                     <div class="profileStory">
                         <h3>About me</h3>
                         <p>I’m a front-end developer based in Toronto. I have a passion for creating web applications that are great to look at,
-                        interactive, and above all functional. I’m currently experimenting with incorporating sprites and sprite animations in
+                        interactive, and functionally efficient. I’m currently experimenting with incorporating sprites and sprite animations in
                         my projects. When I’m not in front of a computer I could be found organizing events and herding cats … I mean people for
                         the tabletop gaming community in Toronto.</p>
                     </div>
@@ -761,22 +761,24 @@
         <!-- outerWrapper -->
     </section>
 
-    <section class="contact linkSection" id="contact">
+    <section class="contact" id="contact">
         <div class="outerWrapper">
             <div class="innerWrapper">
                 <h3>Contact me</h3>
-                <form action="https://formspree.io/jonathan@jonathantung.dev" method="POST">
+                <form action="https://formspree.io/jonathan@jonathantung.dev" method="POST" class="contactForm">
                     <div class="contactNameEmail">
-                        <div class="inputWrapper">
+                        <div class="inputWrapper topInput">
                             <label for="name" class="visuallyHidden">Your name</label>
                             <input type="text" name="name" id="name" placeholder="Your name" class="name" onfocus="this.placeholder=''" onblur="this.placeholder='Your name'">
                             <span class="inputFocusTag">Your name</span>
+                            <span class="underline"></span>
                         </div>
 
                         <div class="inputWrapper">
                             <label for="email" class="visuallyHidden">Your email</label>
                             <input type="email" name="email" id="email" placeholder="Your email" class="email" onfocus="this.placeholder=''" onblur="this.placeholder='Your email'"> 
                             <span class="inputFocusTag">Your email</span>
+                            <span class="underline"></span>
                         </div>
                     </div>
                     <!-- contactNameEmail -->
@@ -784,11 +786,13 @@
                         <label for="subject" class="visuallyHidden">Message subject</label>
                         <input type="text" name="subject" id="subject" class="subject" placeholder="Subject" class="subject" onfocus="this.placeholder=''" onblur="this.placeholder='Subject'">
                         <span class="inputFocusTag">Subject</span>
+                        <span class="underline"></span>
                     </div>
                     <div class="inputWrapper">
                         <label for="message" class="visuallyHidden">Message</label>
                         <input type="text" name="message" id="message" class="message" placeholder="Message" class="message" onfocus="this.placeholder=''" onblur="this.placeholder='Message'">
                         <span class="inputFocusTag">Message</span>
+                        <span class="underline"></span>
                     </div>
                     <button class="contactSend">Send</button>
                 </form>

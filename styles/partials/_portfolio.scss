@@ -1,5 +1,5 @@
 .portfolio {
-    min-height: 100vh;
+    // min-height: 100vh;
 }
 
 .portfolio .innerWrapper {
@@ -87,7 +87,11 @@
 //--------------------------------------------
 //------media queries for responsive----------
 //--------------------------------------------
-
+@media(max-height: 500px) {
+    .portfolio {
+        margin-bottom: 10vh; 
+    }
+}
 
 @media (max-width: 925px) {
     .portfolioGrid {
@@ -132,3 +136,5 @@
         margin-bottom: -10vh;
     }
 }
+
+
