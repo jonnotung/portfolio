@@ -698,8 +698,8 @@ section.profile {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (18vw)[2];
-      grid-template-rows: repeat(2, 18vw);
+  -ms-grid-rows: (45%)[2];
+      grid-template-rows: repeat(2, 45%);
   width: 100%;
   height: 100%;
   grid-gap: 10%;
@@ -787,8 +787,8 @@ section.profile {
     grid-gap: 5%;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (34.5vw)[3];
-        grid-template-rows: repeat(3, 34.5vw);
+    -ms-grid-rows: (30%)[3];
+        grid-template-rows: repeat(3, 30%);
   }
   .portfolio {
     padding: 1vh 0 0 0;
@@ -857,41 +857,41 @@ section.profile {
 }
 
 .proj1 {
-  background-image: url("../assets/project1modal.png");
+  background-image: url("../assets/project1modal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .proj2 {
-  background-image: url("../assets/project2modal.png");
+  background-image: url("../assets/project2modal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-position: 0% center;
+  background-position: 75% center;
 }
 
 .proj3 {
-  background-image: url("../assets/project3modal.png");
+  background-image: url("../assets/project3modal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .proj4 {
-  background-image: url("../assets/project4modal.png");
+  background-image: url("../assets/project4modal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-position: 0% 50%;
+  background-position: center center;
 }
 
 .proj5 {
-  background-image: url("../assets/project5modal.png");
+  background-image: url("../assets/project5modal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-position: 0% 50%;
+  background-position: center center;
 }
 
 .proj6 {
@@ -989,14 +989,23 @@ section.profile {
             flex-direction: column;
   }
   .projImg {
-    width: 80%;
-    height: 60vh;
-    margin: 40px auto 0 auto;
+    width: 75%;
+    height: 75vw;
+    margin: 7.5vh auto 0 auto;
     border-radius: 10px;
   }
   .projDesc {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .projImg {
+    width: 75%;
+    height: 75vw;
+    margin: 7.5vh auto 0 auto;
+    border-radius: 10px;
   }
 }
 
@@ -1006,7 +1015,7 @@ section.profile {
   }
   .projImg {
     width: 75%;
-    height: 50vh;
+    height: 75vw;
     margin: 50px auto 0 auto;
   }
   .projIcons {
@@ -1015,9 +1024,6 @@ section.profile {
 }
 
 @media (max-width: 450px) {
-  .projImg {
-    height: 30vh;
-  }
   .projIcons {
     grid-auto-columns: repeat(2, 1fr);
   }
