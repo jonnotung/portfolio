@@ -38,7 +38,6 @@ app.expandNav = function() {
             );
             app.$navBar.toggleClass(`hiddenNav`);
         }
-        console.log(app.navExpanded);
         app.navExpanded = !app.navExpanded;
     }); 
 } 

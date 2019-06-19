@@ -698,8 +698,8 @@ section.profile {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (45%)[2];
-      grid-template-rows: repeat(2, 45%);
+  -ms-grid-rows: (20vw)[2];
+      grid-template-rows: repeat(2, 20vw);
   width: 100%;
   height: 100%;
   grid-gap: 10%;
@@ -1027,11 +1027,15 @@ section.profile {
   .projIcons {
     grid-auto-columns: repeat(2, 1fr);
   }
+  .projImg {
+    width: 90%;
+    height: 75vw;
+  }
 }
 
 .contact {
   min-height: 60vh;
-  padding-top: 10vh;
+  margin-top: 10vh;
 }
 
 .contact h3 {
@@ -1202,7 +1206,7 @@ footer a:hover {
 
 @media (max-width: 925px) {
   .contact {
-    padding: 0 25px;
+    padding: 0 25px 0 25px;
   }
   .contactNameEmail {
     display: block;
@@ -1221,6 +1225,12 @@ footer a:hover {
 @media (max-width: 550px) {
   .footerSocial {
     width: 85%;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact {
+    padding-top: 25vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */
