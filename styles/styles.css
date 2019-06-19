@@ -230,6 +230,14 @@ body {
   margin: 0 auto;
 }
 
+h3 {
+  color: #f3f6ff;
+  background-color: #ff3511;
+  display: inline-block;
+  padding: 7.5px 12.5px;
+  border-radius: 10px;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.85rem;
@@ -249,10 +257,6 @@ header button {
           appearance: none;
   width: 55px;
   height: 55px;
-}
-
-a:focus {
-  outline: 2px solid #4b89ed;
 }
 
 .skillIcons:hover {
@@ -425,7 +429,7 @@ header p {
 }
 
 .headerSocialIcons a {
-  color: #838383;
+  color: #6D6D6D;
 }
 
 .headerSocialIcons a:hover {
@@ -698,8 +702,8 @@ section.profile {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (20vw)[2];
-      grid-template-rows: repeat(2, 20vw);
+  -ms-grid-rows: (17.5vw)[2];
+      grid-template-rows: repeat(2, 17.5vw);
   width: 100%;
   height: 100%;
   grid-gap: 10%;
@@ -831,8 +835,8 @@ section.profile {
   background-color: #f3f6ff;
   border-radius: 10px;
   max-width: 100%;
-  -webkit-box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
-          box-shadow: 0 25px 20px -15px #838383, 0px 0px 20px 5px #838383;
+  -webkit-box-shadow: 0 25px 20px -15px #6D6D6D, 0px 0px 20px 5px #6D6D6D;
+          box-shadow: 0 25px 20px -15px #6D6D6D, 0px 0px 20px 5px #6D6D6D;
   padding: 0;
 }
 
@@ -933,7 +937,7 @@ section.profile {
 }
 
 .modal a {
-  color: #838383;
+  color: #6D6D6D;
 }
 
 .projDesc a:hover {
@@ -1039,7 +1043,7 @@ section.profile {
 }
 
 .contact h3 {
-  padding: 4vh 0;
+  margin: 4vh 0;
   text-transform: capitalize;
 }
 
@@ -1048,8 +1052,8 @@ input {
   background-color: transparent;
   border: none;
   border: 2px solid transparent;
-  border-bottom: 2px solid #7d7d7d;
-  color: #7d7d7d;
+  border-bottom: 2px solid #6f6f6f;
+  color: #6f6f6f;
   padding: 15px 0px;
 }
 
@@ -1096,7 +1100,7 @@ input:focus {
 input:focus ~ .inputFocusTag {
   display: inline;
   text-transform: capitalize;
-  color: #7d7d7d;
+  color: #6f6f6f;
   font-size: 0.75rem;
   top: -10px;
   left: 0;
@@ -1134,7 +1138,7 @@ input:focus ~ .underline {
 
 footer {
   margin-top: 10vh;
-  border-top: 2px solid #838383;
+  border-top: 2px solid #6D6D6D;
 }
 
 .footerWrap {
@@ -1165,7 +1169,7 @@ footer h2 {
 footer .profileKey {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
-  color: #838383;
+  color: #6D6D6D;
 }
 
 footer .profileValue {
@@ -1186,7 +1190,7 @@ footer .profileValue {
 
 .footerSocial a {
   font-size: 2rem;
-  color: #838383;
+  color: #6D6D6D;
 }
 
 footer a:hover {
@@ -1230,7 +1234,7 @@ footer a:hover {
 
 @media (max-width: 450px) {
   .contact {
-    padding-top: 25vh;
+    padding-top: 15vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */

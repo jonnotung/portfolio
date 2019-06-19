@@ -67,6 +67,14 @@ body {
 //------typography----------------
 //--------------------------------
 
+h3 {
+    color: $background;
+    background-color: $accent;
+    display: inline-block;
+    padding: 7.5px 12.5px;
+    border-radius: 10px;
+}
+
 p {
     font-size: 1rem;
     line-height: 1.85rem;
@@ -89,9 +97,6 @@ header button {
     height: 55px;
 }
 
-a:focus {
-    outline: 2px solid $focus;
-}
 
 .skillIcons:hover {
     animation: jelly 0.5s;
