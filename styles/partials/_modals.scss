@@ -72,7 +72,10 @@
 
 .modal h3{
     margin: 10px 0 25px 0;
+    padding: 0;
     text-transform: capitalize;
+    color: $text;
+    background-color: $background;
 }
 
 .modal a,

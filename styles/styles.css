@@ -313,6 +313,7 @@ header button {
 header {
   min-height: 100vh;
   margin-bottom: 10vh;
+  background-image: linear-gradient(45deg, #f3f6ff, #f3f6ff 88%, #ff3511 88%, #ff3511);
 }
 
 header .innerWrapper {
@@ -402,7 +403,7 @@ nav a {
 }
 
 .portrait {
-  width: 25%;
+  width: 35%;
   margin: 0 0 10vh 0;
 }
 
@@ -417,7 +418,7 @@ header p {
 }
 
 .headerSocialIcons {
-  margin: 10vh 0 0 0;
+  margin: 5vh 0 0 0;
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,7 +441,7 @@ header p {
   background-color: #ff3511;
   color: #f3f6ff;
   padding: 5px 35px;
-  margin: 10vh 0 0 0;
+  margin: 6vh 0 0 0;
   border-radius: 50px;
 }
 
@@ -485,7 +486,7 @@ header p {
 
 @media (max-width: 500px) {
   .portrait {
-    width: 40%;
+    width: 50%;
   }
   .headerSocialIcons {
     width: 75%;
@@ -688,13 +689,18 @@ section.profile {
 }
 
 .portfolioNav {
-  margin: 30px auto 60px auto;
+  margin: 30px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.portfolio h4 {
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .portfolioGrid {
@@ -927,7 +933,10 @@ section.profile {
 
 .modal h3 {
   margin: 10px 0 25px 0;
+  padding: 0;
   text-transform: capitalize;
+  color: #181f33;
+  background-color: #f3f6ff;
 }
 
 .modal a,
@@ -1143,7 +1152,9 @@ input:focus ~ .underline {
 
 footer {
   margin-top: 10vh;
+  padding-bottom: 25px;
   border-top: 2px solid #6D6D6D;
+  background-image: linear-gradient(45deg, #ff3511, #ff3511 15%, #f3f6ff 15%, #f3f6ff);
 }
 
 .footerWrap {
@@ -1204,7 +1215,10 @@ footer a:hover {
 
 .copyright {
   text-align: center;
-  margin-bottom: 25px;
+}
+
+.copyright a {
+  color: #6D6D6D;
 }
 
 @media (max-height: 650px) {

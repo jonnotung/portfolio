@@ -4,7 +4,9 @@
 header {
     min-height: 100vh;
     margin-bottom: 10vh;
-}
+
+    background-image: linear-gradient(45deg, $background, $background 88%,  $accent 88%, $accent );
+ }
 
 header .innerWrapper {
     display: flex;
@@ -82,7 +84,7 @@ nav a {
 }
 
 .portrait {
-    width: 25%;
+    width: 35%; 
     margin: 0 0 10vh 0;
 }
 
@@ -97,7 +99,7 @@ header p {
 }
 
 .headerSocialIcons {
-    margin: 10vh 0 0 0;
+    margin: 5vh 0 0 0;
     width: 25%;
     display: flex;
     justify-content: space-between;
@@ -116,7 +118,7 @@ header p {
     background-color: $accent;
     color: $background;
     padding: 5px 35px;
-    margin: 10vh 0 0 0;
+    margin: 6vh 0 0 0;
     border-radius: 50px;
 }
 
@@ -174,7 +176,7 @@ header p {
  
 
     .portrait {
-        width: 40%;
+        width: 50%;
     }
 
     .headerSocialIcons {
